@@ -21,7 +21,21 @@ function formatearFechaHora(fecha) {
 
 // Evento click en el botón de añadir cita
 btnAñadirCita.addEventListener("click", (event) => {
-    // event.preventDefault();
+    event.preventDefault();
+
+    // Si la fecha seleccionada es anterior a la fecha actual, se muestra un mensaje de alerta
+    const fechaSeleccionada = new Date(formulario.fechaCita.value);
+    const hoySinHora = new Date();
+    hoySinHora.setHours(0, 0, 0, 0);
+    if (fechaSeleccionada < hoySinHora) {
+        alert("La fecha de la cita no puede ser anterior a la fecha actual");
+        formulario.fechaCita.style.borderColor = "#F58787";
+        formulario.fechaCita.style.borderWidth = "2px";
+        return;
+    } else {
+        formulario.fechaCita.style.borderColor = "";
+        formulario.fechaCita.style.borderWidth = "";
+    }
 
     // Se validan que todos los datos del formulario sean válidos y no se quedan vacios
     if (formulario.fechaCita.value === "" || formulario.nombre.value === "" || formulario.apellido.value === "" || formulario.dni.value === "" || formulario.telefono.value === "" || formulario.fecha.value === "") {
@@ -71,6 +85,28 @@ btnAñadirCita.addEventListener("click", (event) => {
     } else {
         formulario.dni.style.borderColor = "";
         formulario.dni.style.borderWidth = "";
+    }
+
+    //Se valida que el campo nombre 4 caracteres y no superen los 20 caracteres
+    if (formulario.nombre.value.length < 4 || formulario.nombre.value.length > 20) {
+        alert("El nombre debe tener entre 4 y 20 caracteres");
+        formulario.nombre.style.borderColor = "#F58787";
+        formulario.nombre.style.borderWidth = "2px";
+        return;
+    } else {
+        formulario.nombre.style.borderColor = "";
+        formulario.nombre.style.borderWidth = "";
+    }
+
+    //Se valida que el campo apellidos 4 caracteres y no superen los 20 caracteres
+    if (formulario.apellido.value.length < 4 || formulario.apellido.value.length > 20) {
+        alert("El apellido debe tener entre 4 y 20 caracteres");
+        formulario.apellido.style.borderColor = "#F58787";
+        formulario.apellido.style.borderWidth = "2px";
+        return;
+    } else {
+        formulario.apellido.style.borderColor = "";
+        formulario.apellido.style.borderWidth = "";
     }
 
     // Se crea un objeto tipo cita con los datos del formulario
