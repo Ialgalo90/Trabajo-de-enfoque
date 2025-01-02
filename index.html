@@ -1,87 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="style.css">
     <title>MedacDent</title>
 </head>
-    <body>
 
-        <header class= "py-8 flex flex-row  justify-center">
-            <img src="src/img/logoMedacDent.png" alt="logo" class="w-[100px]">
-            <p class="text-right text-7xl text-[#7dc6cc] px-5 font-mono mt-8">MEDACDENT</p>
-        </header>
+<body class="font-sans">
 
-        <hr>
+    <header class="py-8 flex flex-row justify-center">
+        <img src="src/img/logoMedacDent.png" alt="logo" class="w-[100px]">
+        <p class="text-right text-7xl text-[#7dc6cc] px-5 mt-8">MEDACDENT</p>
+    </header>
 
-        <main class="m-10">
-            <section class="flex flex-col justify-center items-center">
+    <hr>
 
-                <form id="formularioCita" class="w-[850px] border-2 border-[#7dc6cc] rounded-md p-4">
+    <main class="m-10">
+        <section class="flex flex-col justify-center items-center">
 
-                    <h1 class="text-4xl text-center mb-4 text-[#505b77]">Escoge tu cita</h1>
-                    
-                    <div class="flex flex-row items-center mb-3">
-                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md" for="fechaCita">Cita: </label>
-                    <input class="border px-4 w-full text-center h-[40px] text-slate-600 hover:border-slate-700" type="datetime-local" id="fechaCita" name="fechaCita">
-                    </div><br>
+            <form id="formularioCita" class="w-[850px] border-2 border-[#7dc6cc] rounded-md p-4">
 
-                    <hr>
+                <h1 class="text-4xl text-center mb-4 text-[#505b77]">Escoge tu cita</h1>
 
-                    <h1 class="text-4xl text-center m-5 text-[#505b77]">Información del paciente</h1>
+                <div class="flex flex-row items-center mb-3">
+                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md" for="fechaCita">Cita:
+                    </label>
+                    <input class="border px-4 w-full text-center h-[40px] text-slate-600 hover:border-slate-700"
+                        type="datetime-local" id="fechaCita" name="fechaCita">
+                </div><br>
 
-                    <div class="flex flex-row items-center mb-6">
-                        <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md" for="nombre">Nombre: </label>
-                        <input class="border px-4 h-[40px] w-[50%] hover:border-slate-700 focus:border-none focus:border-slate-950" type="text" id="nombre" name="nombre" placeholder="..." >
-                        <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2" for="apellido">Apellidos: </label>
-                        <input class="border px-4 h-[40px] w-[50%] hover:border-slate-700" type="text" id="apellido" name="apellido" placeholder="...">
-                    </div>
+                <hr>
 
-                    <div class="flex flex-row items-center mb-6">
-                        <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md" for="dni">DNI: </label>
-                        <input class="border px-4 h-[40px] w-[50%] hover:border-slate-700" type="text" id="dni" name="dni" placeholder="8 números y 1 letra">
-                        <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2" for="telefono">Telefono: </label>
-                        <input class="border px-4 h-[40px] w-[45%] hover:border-slate-700" type="text" id="telefono" name="telefono" placeholder="Sólo números">
-                    </div>
+                <h1 class="text-4xl text-center m-5 text-[#505b77]">Información del paciente</h1>
 
-                    <div class="flex flex-row items-center mb-6">
-                        <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md w-[32%]" for="fecha">Fecha de nacimiento: </label>
-                        <input class="border px-4 h-[40px] w-[100%] text-center text-slate-600 hover:border-slate-700" type="date" id="fecha" name="fecha">
-                    </div>
+                <div class="flex flex-row items-center mb-6">
+                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md" for="nombre">Nombre:
+                    </label>
+                    <input
+                        class="border px-4 h-[40px] w-[50%] hover:border-slate-700 focus:border-none focus:border-slate-950"
+                        type="text" id="nombre" name="nombre" placeholder="...">
+                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2" for="apellido">Apellidos: </label>
+                    <input class="border px-4 h-[40px] w-[50%] hover:border-slate-700" type="text" id="apellido"
+                        name="apellido" placeholder="...">
+                </div>
 
-                    <div class="flex flex-row items-center mb-6 h-[74px]">
-                            <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md w-[20%] h-[100%] content-center" for="observacion">Observaciones: </label>
-                            <textarea class="border px-4 h-[100%] w-[100%] py-2 text-slate-600 hover:border-slate-700" name="observacion" id="observacion" cols="50" rows="3"></textarea>
-                    </div>
+                <div class="flex flex-row items-center mb-6">
+                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md" for="dni">DNI: </label>
+                    <input class="border px-4 h-[40px] w-[50%] hover:border-slate-700" type="text" id="dni" name="dni"
+                        placeholder="8 números y 1 letra">
+                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2" for="telefono">Telefono: </label>
+                    <input class="border px-4 h-[40px] w-[45%] hover:border-slate-700" type="text" id="telefono"
+                        name="telefono" placeholder="Sólo números">
+                </div>
 
-                    <!--Botón de confirmar cita -->
-                     <div class="flex flex-row items-center justify-center mb-6">
-                        <button id="btnAñadirCita" class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-sm content-center hover:bg-slate-500 cursor-" type="submit">Confirmar cita</button>
-                    </div>
+                <div class="flex flex-row items-center mb-6">
+                    <label class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md w-[32%]" for="fecha">Fecha de
+                        nacimiento: </label>
+                    <input class="border px-4 h-[40px] w-[100%] text-center text-slate-600 hover:border-slate-700"
+                        type="date" id="fecha" name="fecha">
+                </div>
 
-                </form>
+                <div class="flex flex-row items-center mb-6 h-[74px]">
+                    <label
+                        class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-s-md w-[20%] h-[100%] content-center"
+                        for="observacion">Observaciones: </label>
+                    <textarea class="border px-4 h-[100%] w-[100%] py-2 text-slate-600 hover:border-slate-700"
+                        name="observacion" id="observacion" cols="50" rows="3"></textarea>
+                </div>
 
-                <h2 class="text-4xl text-center mb-4 text-[#505b77] m-5">Tabla de citas</h2>
-                <table class="w-auto border-[#7dc6cc]" id="tablaCitas">
-                    <thead class="bg-[#7dc6cc] text-white">
-                        <tr>
-                            <th class="px-4">Cita Nº</th>
-                            <th class="px-4">Fecha</th>
-                            <th class="px-4">Nombre</th>
-                            <th class="px-4">Apellido</th>
-                            <th class="px-4">DNI</th>
-                            <th class="px-4">Telefóno</th>
-                            <th class="px-4">Fecha de nacimiento</th>
-                            <th class="px-4">Observaciones</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center p-4"></tbody>
-                </table>
+                <!--Botón de confirmar cita -->
+                <div class="flex flex-row items-center justify-center mb-6">
+                    <button id="btnAñadirCita"
+                        class="bg-[#7dc6cc] text-white font-bold px-4 py-2 rounded-sm content-center hover:bg-slate-500 cursor-"
+                        type="submit">Confirmar cita</button>
+                </div>
 
+            </form>
 
-            </section>
-        </main>
-        <script src="src/scripts.js"></script>
-    </body>
+            <h2 class="text-4xl text-center mb-4 text-[#505b77] m-5">Tabla de citas</h2>
+            <table class="w-auto border-[#7dc6cc]" id="tablaCitas">
+                <thead class="bg-[#7dc6cc] text-white">
+                    <tr>
+                        <th class="px-4">Cita Nº</th>
+                        <th class="px-4">Fecha</th>
+                        <th class="px-4">Nombre</th>
+                        <th class="px-4">Apellido</th>
+                        <th class="px-4">DNI</th>
+                        <th class="px-4">Telefóno</th>
+                        <th class="px-4">Fecha de nacimiento</th>
+                        <th class="px-4">Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center p-4"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+    <footer class="px-10 w-full flex flex-row justify-center bg-[#7dc6cc] text-white">
+        <section class="py-8 w-full sectionFooter">
+            <h2 class="text-4xl font-bold">MedacDent</h2>
+            <ul>
+                <li><span class="font-bold">Dirección: </span>Av. de la Independencia, s/n</li>
+                <li><span class="font-bold">Teléfono: </span>+34 647 20 00 00</li>
+                <li><span class="font-bold">Correo: </span>info@mdjerez.com</li>
+            </ul>
+        </section>
+        <section class="py-8 w-full sectionFooter">
+            <h2 class="text-4xl font-bold">Redes Sociales</h2>
+            <ul class="flex flex-row">
+                <li><img src="src/img/iconFacebook.png" alt="facebook" class="imgRedes"></li>
+                <li><img src="src/img/iconTwitter.png" alt="twitter" class="imgRedes"></li>
+                <li><img src="src/img/iconInstragram.png" alt="instagram" class="imgRedes"></li>
+                <li><img src="src/img/iconYoutube.png" alt="youtube" class="imgRedes"></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="src/scripts.js"></script>
+</body>
+
 </html>
